@@ -21,5 +21,27 @@ header {
 }
 
 h1 {
-    
+    color: grey;
+    font-size: 3vmin;
+}
+
+#markers {
+    display: grid;
+    grid-template-columns: repeat(7, 10vmin);
+    gap: 1vmin;
+    margin-top: 1.5vmin;   
+}
+
+#markers > div {
+    height: 10vmin;
+    border-width: 5vmin;
+    border-style: solid;
+    border-color: lightgray transparent transparent;
+    transform: scale(0.7)
+}
+
+#markers > div:hover {
+    transform: scale(0.9);
+    transition: transform 150ms ease-in;
+    border-top-color: darkgray;
 }
