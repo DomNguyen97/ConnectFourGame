@@ -58,3 +58,19 @@ h1 {
     border-radius: 50%;
     border: 0.1vmin solid grey;
 }
+
+button {
+    margin-top: 4vmin;
+    padding: 2vmin;
+    font-size: 2vmin;
+    border-radius: 4vmin;
+    border: 0.1vmin solid black;
+}
+
+button:hover {
+    color: white;
+    background-color: darkgrey;
+    transform: scale(1.2);
+    transition: transform 150ms ease-in;
+
+}
