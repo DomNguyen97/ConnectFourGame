@@ -46,7 +46,7 @@ function renderBoard() {
         colArr.forEach(function(cellVal, rowIdx){
             const cellId = `c${colIdx}r${rowIdx}`;
             const cellEl = document.getElementById(cellId);
-            cellEl.style.backgroundColor =     
+               
         });
     }); 
 }
