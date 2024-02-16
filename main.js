@@ -12,6 +12,7 @@ let winner; //null = no winner, 1 or -1 = winner; 'T' = tie game
 
 /*----- cached elements  -----*/
 const messageEl = document.querySelector('h1');
+const playAgainBtn = document.querySelector('button');
 
 /*----- event listeners -----*/
 
@@ -67,6 +68,5 @@ function renderMessage() {
 }
 
 function renderControls() {
-    
-
+        playAgainBtn.style.visibility = winner ? 'visible' : 'hidden'; 
 }
