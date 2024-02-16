@@ -23,13 +23,13 @@ function init() {
     //to visualize the board's mapping to the DOM,
     // rotate the board's array 90 degrees counter-clockwise
     board = [
-        [1, 0, 0, 0, 0, -1 ], //col 0
+        [0, 0, 0, 0, 0, 0 ], //col 0
         [0, 0, 0, 0, 0, 0 ], //col 1
         [0, 0, 0, 0, 0, 0 ], //col 2
-        [-1, 0, 0, 0, 0, 0 ], //col 3
+        [0, 0, 0, 0, 0, 0 ], //col 3
         [0, 0, 0, 0, 0, 0 ], //col 4
         [0, 0, 0, 0, 0, 0 ], //col 5
-        [0, 0, 0, 0, 0, 1 ], //col 6
+        [0, 0, 0, 0, 0, 0 ], //col 6
     ];
     turn = 1;
     winner= null;
@@ -50,7 +50,7 @@ function renderBoard() {
         colArr.forEach(function(cellVal, rowIdx){
             const cellId = `c${colIdx}r${rowIdx}`;
             const cellEl = document.getElementById(cellId);
-               
+            cellEl.style.backgroundColor = COLORS[cellVal];   
         });
     }); 
 }
