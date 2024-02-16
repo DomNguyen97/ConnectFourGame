@@ -1,8 +1,8 @@
 /*----- constants -----*/
 const COLORS = {
-    '0': 'white',
-    '1':'purple',
-    '-1': 'orange'
+    '0': 'White',
+    '1':'Purple',
+    '-1': 'Orange'
 };
 
 /*----- state variables -----*/
@@ -11,7 +11,7 @@ let turn; // 1 of -1
 let winner; //null = no winner, 1 or -1 = winner; 'T' = tie game
 
 /*----- cached elements  -----*/
-
+const messageEl = document.querySelector('h1');
 
 /*----- event listeners -----*/
 
@@ -56,7 +56,13 @@ function renderBoard() {
 }
 
 function renderMessage() {
-
+    if (winner === 'T') {
+        messageEl.innerText = "Its a Tie!!!";
+    } else if (winner) {
+        messageEl.innerHTML = `${COLORS[winner]}`;
+    } else {
+        messageEl.innerHTML = `${COLORS[turn]}'s Turn`;
+    }
 }
 
 function renderControls() {
