@@ -60,11 +60,13 @@ function renderMessage() {
         messageEl.innerText = "Its a Tie!!!";
     } else if (winner) {
         messageEl.innerHTML = `${COLORS[winner]}`;
+        messageEl.innerHTML = `<span style="color: ${COLORS[winner]}">${COLORS[winner].toUpperCase()}</span> Wins!`;
     } else {
         messageEl.innerHTML = `<span style="color: ${COLORS[turn]}">${COLORS[turn].toUpperCase()}</span>'s Turn`;
     }
 }
 
 function renderControls() {
+    
 
 }
