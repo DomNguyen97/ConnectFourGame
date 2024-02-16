@@ -61,7 +61,7 @@ function renderMessage() {
     } else if (winner) {
         messageEl.innerHTML = `${COLORS[winner]}`;
     } else {
-        messageEl.innerHTML = `${COLORS[turn]}'s Turn`;
+        messageEl.innerHTML = `<span style="color: ${COLORS[turn]}">${COLORS[turn].toUpperCase()}</span>'s Turn`;
     }
 }
 
