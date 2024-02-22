@@ -13,10 +13,10 @@ let winner; //null = no winner, 1 or -1 = winner; 'T' = tie game
 /*----- cached elements  -----*/
 const messageEl = document.querySelector('h1');
 const playAgainBtn = document.querySelector('button');
-const markerEls = document.querySelectorAll('#markers > div');
+const markerEls = [...document.querySelectorAll('#markers > div')];
 
 /*----- event listeners -----*/
-
+document.getElementById('markers').addEventListener('click', handleDrop);
 
 /*----- functions -----*/
 init();
@@ -78,4 +78,15 @@ function renderControls() {
       const hideMarker = !board[colIdx].includes(0) || winner;
       markerEl.style.visibility = hideMarker ? 'hidden' : 'visible';
     });
+  }
+
+
+// In response to use interaction, update all impacted
+// state, then call render();
+  function handleDrop(evt) {
+    const colIdx = markerEls.indexOf(evt.target);
+    console.log(colIdx);
+
+
+    render();
   }
